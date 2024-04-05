@@ -3,7 +3,7 @@ import time
 import multiprocessing
 
 def generate_cpu_load(duration):
-    print("Creating CPU load...")
+    print(f"Creating CPU load for {duration} seconds...")
     processes = []
 
     # Start a separate process for each CPU core
@@ -29,5 +29,6 @@ def cpu_worker():
 
 # Main script
 if __name__ == "__main__":
-    duration = 30  # Duration of CPU load in seconds (adjust as needed)
+    duration = int(input("Enter the duration (in seconds) for CPU load generation: "))
     generate_cpu_load(duration)
+
